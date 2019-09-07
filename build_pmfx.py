@@ -1103,7 +1103,7 @@ def compile_hlsl(_info, pmfx_name, _tp, _shader):
     cmdline = exe + " "
     cmdline += "/T " + shader_model[_shader.shader_type] + " "
     cmdline += "/E " + _shader.main_func_name + " "
-    cmdline += "/Fo " + output_file_and_path + " " + temp_file_and_path + " "
+    cmdline += "/Fo " + output_file_and_path + " " + temp_file_and_path + " " + "/Fc /Od /Zi" + " "
 
     # process = subprocess.Popen([exe + ".exe", cmdline], shell=True, stdout=subprocess.PIPE)
     # rt = subprocess.call(cmdline, shell=True)
